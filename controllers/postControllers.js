@@ -9,7 +9,7 @@ export const getAccounts = async (req, res) => {
     }
     res.status(200).json(userAccounts);
   } catch (err) {
-    res.status(500).json({ verify: false });
+    res.status(500).json({ msg: err.message });
   }
 };
 
