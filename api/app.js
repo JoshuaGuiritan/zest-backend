@@ -1,7 +1,7 @@
 import express from "express";
 import router from "../routes/route.js";
 import dbConnect from "../db/dbconn.js";
-import serverless from "serverless.http";
+import serverless from "serverless-http";
 import cors from "cors";
 
 const app = express();
