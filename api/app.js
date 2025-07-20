@@ -3,7 +3,7 @@ import router from "../routes/route.js";
 import dbConnect from "../db/dbconn.js";
 import cors from "cors";
 
-dbConnect();
+await dbConnect();
 const app = express();
 
 app.use(cors());
