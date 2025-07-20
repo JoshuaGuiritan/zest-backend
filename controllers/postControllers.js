@@ -58,7 +58,7 @@ export const signup = async (req, res) => {
       return res.status(404).json({ verify: false });
     }
     const savedAccount = await userSignUp.save();
-    res.status(201).json({ verify: true });
+    res.statrus(201).json({ verify: true });
   } catch (err) {
     res.status(500).json({ verify: false });
   }
