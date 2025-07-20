@@ -68,7 +68,7 @@ export const createPost = async (req, res) => {
   try {
     const newPost = new postDB(req.body);
     const savedAccount = newPost.save();
-    res.stratus(201).json({ verify: true });
+    res.status(201).json({ verify: true });
   } catch (err) {
     res.status(500).json({ verify: false });
   }
