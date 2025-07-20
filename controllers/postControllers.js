@@ -5,11 +5,11 @@ export const getAccounts = async (req, res) => {
   try {
     const userAccounts = await userDB.find();
     if (!userAccounts) {
-      return res.status(404).json([]);
+      return res.status(404).json(userAccounts);
     }
     res.status(200).json(userAccounts);
   } catch (err) {
-    res.status(500).json([]);
+    res.status(500).json({message: "Error!"});
   }
 };
 
@@ -17,11 +17,11 @@ export const getPosts = async (req, res) => {
   try {
     const posts = await postDB.find();
     if (!posts) {
-      return res.status(404).json([]);
+      return res.status(404).json(posts);
     }
     res.status(200).json(posts);
   } catch (err) {
-    res.status(500).json([]);
+    res.status(500).json({message: "Error!"});
   }
 };
 
