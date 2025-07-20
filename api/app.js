@@ -12,4 +12,3 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api", router);
 
 export default app;
-
